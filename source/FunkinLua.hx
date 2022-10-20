@@ -463,9 +463,9 @@ var cervix = luaFile + ".lua";
 				if(libPackage.length > 0)
 					str = libPackage + '.';
 			hscript.variables.set(libName, Type.resolveClass(str + libName));
-		catch (e:Dynamic) {
+		} catch (e:Dynamic) {
 				luaTrace(scriptName + ":" + lastCalledFunction + " - " + e, false, false, FlxColor.RED);
-		}}});
+		}});
 		
             Lua_helper.add_callback(lua, "loadSong", function(?name:String = null, ?difficultyNum:Int = -1) {
 			if(name == null || name.length < 1)
