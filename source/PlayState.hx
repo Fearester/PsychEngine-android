@@ -4076,6 +4076,10 @@ class PlayState extends MusicBeatState
 			luaArray[i].stop();
 		}
 		luaArray = [];
+		
+		#if hscript
+		if(FunkinLua.hscript != null) FunkinLua.hscript = null;
+		#end
 
 		if(!ClientPrefs.controllerMode)
 		{
